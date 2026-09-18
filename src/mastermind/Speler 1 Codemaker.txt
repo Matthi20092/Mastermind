@@ -1,0 +1,69 @@
+Deelprobleem 1: regels en kleuren
+
+Speler 1: Codemaker
+Speler 2: Codekraker
+
+De codekraker mag ALLEEN de pin kleuren: rood, oranje, geel, blauw, groen en paars gebruiken.
+
+De codemaker mag ALLEEN de pin kleuren: zwart en wit gebruiken om te antwoorden op de codekrakers' poging om de code te kraken. Voor de code die de codemaker instelt mogen ALLEEN de kleuren rood, oranje, geel, blauw, groen en paars worden gebruikt.
+
+
+
+
+Deelprobleem 2: kant van bord en zichtschermpje
+
+Gezien van de codekrakers' kant, de linkerzijde met de nummers van het bord is alleen voor de codekraker en de rechterzijde alleen voor de codemaker. (CODE KRAKER KANT EN CODE MAKER KANT)
+
+De codemaker moet de ZWARTE pin gebruiken als één van de pins van de codekraker op de goede plek EN de juiste kleur heeft. De codemaker moet de WITTE pin gebruiken als de kleur van de pin goed is MAAR de positie van de pin is fout.
+
+Na dat de codemaker de code heeft ingesteld op de gaten boven de 10de rij, moet hij het zichtschermpje over de code plaatsen zodat de codekraker de code NIET kan zien, de codekraker mag de ingestelde code ook NIET bekijken.
+
+De codekraker voert één rij uit op volgorde van 1-10 en wacht daarna tot de codemaker het antwoord op zijn poging heeft neergezet.
+
+De codemaker plaatst de witte en/of zwarte pinnen op de juiste vakjes op dezelfde rij als de codekraker
+
+De codekraker moet wegkijken tot dat de codemaker de code heeft ingevoerd en bedekt met het zichtschermpje
+
+
+
+
+Deelprobleem 3: code instellen
+
+1. De codemaker pakt één kleur en zet hem in codevakje 1
+
+2. De codemaker pakt één kleur en zet hem in codevakje 2 
+
+3. De codemaker pakt één kleur en zet hem in codevakje 3 
+
+4. De codemaker pakt één kleur en zet hem in codevakje 4 
+
+
+
+Deelprobleem 4: poging van codekraker
+
+5. De codekraker mag nu 6 kleuren gebruiken en stopt één kleur in vakje 1 rij 1. (user-input)
+
+6. De codekraker mag nu 6 kleuren gebruiken stopt één kleur in vakje 2 rij 1. (user-input)
+
+7. De codekraker mag nu 6 kleuren gebruiken stopt één kleur in vakje 3 rij 1. (user-input)
+
+8. De codekraker mag nu 6 kleuren gebruiken stopt één kleur in vakje 4 rij 1. (user-input)
+
+
+
+Deelprobleem 5: poging controleren en pinnen plaatsen
+
+6.. De codemaker bekijkt of één of meerdere kleuren van de poging van de codekraker overeen komen met de code. Zo ja, de codemaker plaatst de toepassende pin op de juiste rij en plek. (De zwarte of witte pin). Als een pin niet klopt met kleur en positie, hoeft de codemaker geen pin te plaatsen op die plek. (user-input)
+
+7. De codemaker checkt de pin met de code pin met dezelfde nummer 
+
+8. Als ze overeenkomen dan plaatst codemaker een zwarte pin op de juiste plek anders checkt hij de andere code pins, zit de juiste pin wel in de code maar niet op de juiste plaats, plaatst de codemaker een witte pin. Anders plaatst de codemaker niks. Herhaal dit voor alle andere pinnen. (user-output)
+
+
+
+
+Deelprobleem 6: spel herhalen en wie wint
+
+9. Herhaal vanaf stap 5 tot dat er 4 zwarte pins zijn geplaatst op een horizontale rij of totdat alle 10 de kansen zijn opgemaakt. Elke ronde ga je door naar de volgende rij.
+
+10. Als de codekraker de code heeft kunnen raden en er staan 4 zwarte pins, heeft speler 2 gewonnen. Zijn alle 10 kansen opgemaakt en zijn er geen 4 zwarte pinnen op één rij? Speler 1 heeft dan gewonnen. (user-output)
