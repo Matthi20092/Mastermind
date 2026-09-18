@@ -1,0 +1,38 @@
+START
+
+Maak kleur geel
+Maak kleur groen
+Maak kleur blauw
+Maak kleur rood
+Maak kleur paars
+Maak kleur oranje
+Maak kleur zwart
+Maak kleur wit
+Maak kleur leeg
+
+Zeg "Speler 1 = Codemaker"
+Zeg "Speler 2 = Codekraker"
+
+Geheime code 1 = blauw
+Geheime code 2 = rood
+Geheime code 3 = oranje
+Geheime code 4 = paars
+
+Vraag "Rij 1, vakje 1"
+Sla antwoord op als poging 1
+
+Vraag "Rij 1, vakje 2"
+Sla antwoord op als poging 2
+
+Vraag "Rij 1, vakje 3"
+Sla antwoord op als poging 3
+
+Vraag "Rij 1, vakje 4"
+Sla antwoord op als poging 4
+
+Zeg poging 1, poging 2, poging 3, poging 4
+
+Zeg "De code is:"
+Zeg geheime code 1, geheime code 2, geheime code 3, geheime code 4
+
+STOP
