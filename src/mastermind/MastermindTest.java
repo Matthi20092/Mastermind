@@ -9,6 +9,20 @@ public class MastermindTest {
 
 		Scanner input = new Scanner(System.in);
 
+		System.out.println("Mastermind Test");
+		String geelPin="Geel";
+		String groenPin="Groen";
+		String blauwPin="Blauw";
+		String roodPin="Rood";
+		String paarsPin="Paars";
+		String oranjePin="Oranje";
+		
+		String zwartPin="Zwart";
+		String witPin="Wit";
+		String leegPin="Leeg";
+		System.out.println("Speler 1 = Codemaker");
+		System.out.println("Speler 2 = Codekraker");
+
 		String poging1;
 		String poging2;
 		String poging3;
