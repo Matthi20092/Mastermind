@@ -1,4 +1,4 @@
-package mastermindTest;
+package mastermind;
 
 import java.util.Scanner;
 
@@ -49,9 +49,24 @@ public class MastermindTest {
 		System.out.println(geheimecode1 + " " + geheimecode2 + " " + geheimecode3 + " " + geheimecode4);
 
 		if (poging1.equalsIgnoreCase(geheimecode1)) {
-			
-		} else if (poging1.equalsIgnoreCase(geheimecode2)) {
-
+			System.out.println("Je hebt één zwarte pin.");
+		} else if (poging1.equalsIgnoreCase(geheimecode2)){
+			System.out.println("Je hebt één witte pin");
+		} else if (poging1.equalsIgnoreCase(geheimecode3)){
+			System.out.println("Je hebt één witte pin");
+		} else if (poging1.equalsIgnoreCase(geheimecode4)){
+			System.out.println("Je hebt één witte pin");}
+		else {
+			System.out.println("Helaas, je hebt niks.");
 		}
+		
+		if (poging2.equalsIgnoreCase(geheimecode2)) {
+			System.out.println("Je hebt één zwarte pin.");
+		} else if (poging2.equalsIgnoreCase(geheimecode1)){
+			System.out.println("Je hebt één witte pin");
+		} else if (poging2.equalsIgnoreCase(geheimecode3)){
+			System.out.println("Je hebt één witte pin");
+		} else if (poging2.equalsIgnoreCase(geheimecode4)){
+			System.out.println("Je hebt één witte pin");}
 	}
 }
