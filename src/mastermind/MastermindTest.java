@@ -10,6 +10,9 @@ public class MastermindTest {
 		Scanner input = new Scanner(System.in);
 
 		System.out.println("Mastermind Test");
+
+		// Kleuren
+
 		String geelPin = "geel";
 		String groenPin = "groen";
 		String blauwPin = "blauw";
@@ -17,56 +20,73 @@ public class MastermindTest {
 		String paarsPin = "paars";
 		String oranjePin = "oranje";
 
+		// Kleuren
+
 		String zwartPin = "zwart";
 		String witPin = "wit";
 		String leegPin = "Leeg";
 		System.out.println("Speler 1 = Codemaker");
 		System.out.println("Speler 2 = Codekraker");
 
-		String geheimecode1 = blauwPin;
-		String geheimecode2 = roodPin;
-		String geheimecode3 = oranjePin;
-		String geheimecode4 = paarsPin;
-		String poging1;
-		String poging2;
-		String poging3;
-		String poging4;
+		// Geheime code & pogingen
 
-		System.out.println("Rij 1, vakje 1:");
-		poging1 = input.nextLine();
+		String[] geheimeCodes = { blauwPin, roodPin, oranjePin, paarsPin};
+		String[] pogingen = new String[4];
 
-		System.out.println("Rij 1, vakje 2:");
-		poging2 = input.nextLine();
+		// User input voor poging 1
+		
+		boolean gewonnen = false;
+		for (int ronde = 1; ronde <= 10; ronde++) {
+			int zwartePinnen = 0;
+			int wittePinnen = 0;
+		for (int i = 0; i<4; i++) {
+			System.out.println("Rij " + ronde + ", vakje " + (i+1) + ":");
+			pogingen[i] = input.nextLine();
+		}
+			// Printen van de ingevoerde code"
+		 
+		 System.out.println("Jouw poging is: ");
+		 for (int i = 0; i < pogingen.length; i++) {
+			 if (i < pogingen.length - 1) {
+				 System.out.println(pogingen [i] + " ");
+			 } else {
+				 System.out.println(pogingen[i]);
+			 }
+		 }
 
-		System.out.println("Rij 1, vakje 3:");
-		poging3 = input.nextLine();
+         System.out.println("De code is: " +
+                 geheimeCodes[0] + " " + geheimeCodes[1] + " " + geheimeCodes[2] + " " + geheimeCodes[3]);
+			// Controleren van code
 
-		System.out.println("Rij 1, vakje 4:");
-		poging4 = input.nextLine();
+         
+         for (int i = 0; i < 4; i++) {
 
-		System.out.println(poging1 + " " + poging2 + " " + poging3 + " " + poging4);
-		System.out.println("De code is: ");
-		System.out.println(geheimecode1 + " " + geheimecode2 + " " + geheimecode3 + " " + geheimecode4);
-
-		if (poging1.equalsIgnoreCase(geheimecode1)) {
-			System.out.println("Je hebt één zwarte pin.");
-		} else if (poging1.equalsIgnoreCase(geheimecode2)){
-			System.out.println("Je hebt één witte pin");
-		} else if (poging1.equalsIgnoreCase(geheimecode3)){
-			System.out.println("Je hebt één witte pin");
-		} else if (poging1.equalsIgnoreCase(geheimecode4)){
-			System.out.println("Je hebt één witte pin");}
-		else {
-			System.out.println("Helaas, je hebt niks.");
+             if (pogingen[i].equalsIgnoreCase(geheimeCodes[i])) {
+                 zwartePinnen++;
+             } else if (
+                     pogingen[i].equalsIgnoreCase(geheimeCodes[0]) ||
+                     pogingen[i].equalsIgnoreCase(geheimeCodes[1]) ||
+                     pogingen[i].equalsIgnoreCase(geheimeCodes[2]) ||
+                     pogingen[i].equalsIgnoreCase(geheimeCodes[3])
+             ) {
+                 wittePinnen++;
+             }
+         }
+			
+			if(zwartePinnen >= 4){
+				// have won
+			System.out.println("Je hebt gewonnen!");
+			gewonnen = true;
+			break;
+			}else {
+				System.out.println("Je hebt: " + zwartePinnen + " zwarte pinnen en: " + wittePinnen + " witte pinnen.");
+				zwartePinnen = 0;
+				wittePinnen = 0;
+			}
+			if(ronde >9) {
+				System.out.println("Je hebt de " + ronde + " beurten gebruikt en de code niet kunnen raden.");
+			}
 		}
 		
-		if (poging2.equalsIgnoreCase(geheimecode2)) {
-			System.out.println("Je hebt één zwarte pin.");
-		} else if (poging2.equalsIgnoreCase(geheimecode1)){
-			System.out.println("Je hebt één witte pin");
-		} else if (poging2.equalsIgnoreCase(geheimecode3)){
-			System.out.println("Je hebt één witte pin");
-		} else if (poging2.equalsIgnoreCase(geheimecode4)){
-			System.out.println("Je hebt één witte pin");}
 	}
 }
