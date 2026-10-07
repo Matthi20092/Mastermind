@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Flowchart Mastermind First Success"/>
+        <attribute name="authors" value="matth"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-02 03:50:26 "/>
+        <attribute name="created" value="bWF0dGg7TEFQVE9QX01BVFRISUFTOzIwMjYtMTAtMDI7IjAyOjU0OjE1ICI7Mjg4OQ=="/>
+        <attribute name="edited" value="bWF0dGg7TEFQVE9QX01BVFRISUFTOzIwMjYtMTAtMDI7IjAzOjUwOjI2ICI7MjsyOTk3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rodepin, oranjepin, blauwepin, groenepin, paarsepin, gelepin, zwartepin, wittepin, rij" type="Integer" array="False" size=""/>
+            <declare name="codevakje1, codevakje2, codevakje3, codevakje4, code, poging1, poging2, poging3, poging4" type="String" array="False" size=""/>
+            <assign variable="codevakje1" expression="&quot;rood&quot;"/>
+            <assign variable="codevakje2" expression="&quot;blauw&quot;"/>
+            <assign variable="codevakje3" expression="&quot;paars&quot;"/>
+            <assign variable="codevakje4" expression="&quot;oranje&quot;"/>
+            <assign variable="code" expression="codevakje1 &amp; &quot; &quot; &amp; codevakje2 &amp; &quot; &quot; &amp; codevakje3 &amp; &quot; &quot; &amp; codevakje4"/>
+            <assign variable="rij" expression="0"/>
+            <assign variable="zwartepin" expression="0"/>
+            <assign variable="wittepin" expression="0"/>
+            <for variable="rij" start="0" end="9" direction="inc" step="1">
+                <assign variable="zwartepin" expression="0"/>
+                <assign variable="wittepin" expression="0"/>
+                <output expression="&quot;codevakje1&quot;" newline="True"/>
+                <input variable="poging1"/>
+                <output expression="&quot;codevakje2&quot;" newline="True"/>
+                <input variable="poging2"/>
+                <output expression="&quot;codevakje3&quot;" newline="True"/>
+                <input variable="poging3"/>
+                <output expression="&quot;codevakje4&quot;" newline="True"/>
+                <input variable="poging4"/>
+                <if expression="codevakje1 = poging1">
+                    <then>
+                        <assign variable="zwartepin" expression="zwartepin+1"/>
+                    </then>
+                    <else>
+                        <if expression="codevakje2 = poging1">
+                            <then>
+                                <assign variable="wittepin" expression="wittepin+1"/>
+                            </then>
+                            <else>
+                                <if expression="codevakje3 = poging1">
+                                    <then>
+                                        <assign variable="wittepin" expression="wittepin+1"/>
+                                    </then>
+                                    <else>
+                                        <if expression="codevakje4 = poging1">
+                                            <then>
+                                                <assign variable="wittepin" expression="wittepin+1"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <if expression="codevakje2 = poging2">
+                    <then>
+                        <assign variable="zwartepin" expression="zwartepin+1"/>
+                    </then>
+                    <else>
+                        <if expression="codevakje1 = poging2">
+                            <then>
+                                <assign variable="wittepin" expression="wittepin+1"/>
+                            </then>
+                            <else>
+                                <if expression="codevakje3 = poging2">
+                                    <then>
+                                        <assign variable="wittepin" expression="wittepin+1"/>
+                                    </then>
+                                    <else>
+                                        <if expression="codevakje4 = poging2">
+                                            <then>
+                                                <assign variable="wittepin" expression="wittepin+1"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <if expression="codevakje3 = poging3">
+                    <then>
+                        <assign variable="zwartepin" expression="zwartepin+1"/>
+                    </then>
+                    <else>
+                        <if expression="codevakje1 = poging3">
+                            <then>
+                                <assign variable="wittepin" expression="wittepin+1"/>
+                            </then>
+                            <else>
+                                <if expression="codevakje2 = poging3">
+                                    <then>
+                                        <assign variable="wittepin" expression="wittepin+1"/>
+                                    </then>
+                                    <else>
+                                        <if expression="codevakje4 = poging3">
+                                            <then>
+                                                <assign variable="wittepin" expression="wittepin+1"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <if expression="codevakje4 = poging4">
+                    <then>
+                        <assign variable="zwartepin" expression="zwartepin+1"/>
+                    </then>
+                    <else>
+                        <if expression="codevakje1 = poging4">
+                            <then>
+                                <assign variable="wittepin" expression="wittepin+1"/>
+                            </then>
+                            <else>
+                                <if expression="codevakje2 = poging4">
+                                    <then>
+                                        <assign variable="wittepin" expression="wittepin+1"/>
+                                    </then>
+                                    <else>
+                                        <if expression="codevakje3 = poging4">
+                                            <then>
+                                                <assign variable="wittepin" expression="wittepin+1"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Je hebt &quot; &amp; zwartepin &amp; &quot;zwarte pin(s) en &quot; &amp; wittepin &amp; &quot;wittepin(s)&quot;" newline="True"/>
+                <if expression="zwartepin&gt;=4">
+                    <then>
+                        <assign variable="rij" expression="9"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="zwartepin&gt;=4">
+                <then>
+                    <output expression="&quot;Goed gedaan! Je hebt de code geraden. &quot; &amp; code" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Helaas, je hebt de code niet kunnen raden, de code was: &quot; &amp; code" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
