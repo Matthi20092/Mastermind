@@ -1,0 +1,66 @@
+Deelprobleem 1: regels en kleuren
+
+Speler 1: Codemaker
+Speler 2: Codekraker
+
+De codekraker mag ALLEEN de pin kleuren: rood, oranje, geel, blauw, groen en paars gebruiken
+
+De codemaker mag ALLEEN de pin kleuren: zwart en wit gebruiken om te antwoorden op de codekrakers' poging om de code te kraken. Voor de code die de codemaker instelt mogen ALLEEN de kleuren rood, oranje, geel, blauw, groen en paars worden gebruikt.
+
+
+
+
+Deelprobleem 2: kant van bord en zichtschermpje 	
+
+Gezien van de codekrakers' kant, de linkerzijde met de nummers van het bord is alleen voor de codekraker en de rechterzijde alleen voor de codemaker. (CODE KRAKER KANT EN CODE MAKER KANT)
+
+De codemaker moet de ZWARTE pin gebruiken als één van de pins van de codekraker op de goede plek EN de juiste kleur heeft. De codemaker moet de WITTE pin gebruiken als de kleur van de pin goed is MAAR de positie van de pin is fout.
+
+Na dat de codemaker de code heeft ingesteld op de gaten boven de 10de rij, moet hij het zichtschermpje over de code plaatsen zodat de codekraker de code NIET kan zien, de codekraker mag de ingestelde code ook NIET bekijken.
+
+De codekraker voert één rij uit op volgorde van 1-10 en wacht daarna tot de codemaker het antwoord op zijn poging heeft neergezet.
+
+De codemaker plaatst de witte en/of zwarte pinnen op de juiste vakjes op dezelfde rij als de codekraker
+
+De codekraker moet wegkijken tot dat de codemaker de code heeft ingevoerd en bedekt met het zichtschermpje
+
+
+Deelprobleem 3: code instellen
+
+1. De codemaker pakt één kleur en zet hem in codevakje 1
+
+HERHAAL stap 1, 4 keer voor codevakje 2, 3 en 4.
+
+CONTROLEER of er 4 kleuren staan.
+
+
+Deelprobleem 4: poging van codekraker
+
+2. De codekraker mag nu 6 kleuren gebruiken en stopt één kleur in vakje 1 rij 1. (user-input)
+
+HERHAAL stap 2 voor vakje 2, 3 en 4.
+CONTROLEER of er 4 kleuren staan.
+
+
+Deelprobleem 5: poging controleren en pinnen plaatsen
+
+Check code pin 1 met poging 1 
+ALS poging 1 overeenkomt met code pin 1 
+DAN plaats je één zwarte pin 
+ANDERS check code pin 2 met poging 1, ALS code pin 2 overeenkomt met poging 1 
+DAN plaats je één witte pin 
+ANDERS check code pin 3 met poging 1, ALS code pin 3 overeenkomt met poging 1 
+DAN plaats je één witte pin 
+ANDERS check code pin 4 met poging 1, ALS code pin 4 overeenkomt met poging 1 
+DAN plaats je één witte pin. 
+ANDERS 
+DAN hoef je GEEN zwarte of witte pin te plaatsen.
+Herhaal dit met poging 2, 3 en 4.
+
+
+
+Deelprobleem 6: spel herhalen en wie wint
+
+9. Herhaal vanaf stap 5 tot dat er 4 zwarte pins zijn geplaatst op een horizontale rij of totdat alle 10 de kansen zijn opgemaakt. Elke ronde ga je door naar de volgende rij.
+
+10. ALS de codekraker de code heeft kunnen raden en er staan 4 zwarte pins, DAN heeft speler 2 gewonnen. ALS alle 10 kansen opgemaakt zijn en zijn er geen 4 zwarte pinnen op één rij? DAN heeft speler 1 gewonnen. (user-output)

@@ -9,7 +9,7 @@ public class MastermindTest {
 
 		Scanner input = new Scanner(System.in);
 
-		System.out.println("Mastermind Test");
+		System.out.println("Mastermind Test. Dubbele kleuren bestaan niet.");
 
 		// Kleuren
 
@@ -47,27 +47,34 @@ public class MastermindTest {
 
 			System.out.println("Jouw poging is: ");
 			for (int i = 0; i < pogingen.length; i++) {
-				if (i < pogingen.length - 1) {
-					System.out.println(pogingen[i] + " ");
-				} else {
-					System.out.println(pogingen[i]);
-				}
+					System.out.print(pogingen[i] + " ");
 			}
-
+			System.out.println();
 			System.out.println("De code is: " + geheimeCodes[0] + " " + geheimeCodes[1] + " " + geheimeCodes[2] + " "
 					+ geheimeCodes[3]);
 			// Controleren van code
+			
+			String[] feedback = new String[4];
 
 			for (int i = 0; i < 4; i++) {
 
 				if (pogingen[i].equalsIgnoreCase(geheimeCodes[i])) {
+					feedback[i] = "zwart";
 					zwartePinnen++;
 				} else if (pogingen[i].equalsIgnoreCase(geheimeCodes[0])
 						|| pogingen[i].equalsIgnoreCase(geheimeCodes[1])
 						|| pogingen[i].equalsIgnoreCase(geheimeCodes[2])
-						|| pogingen[i].equalsIgnoreCase(geheimeCodes[3])) {
+						|| pogingen[i].equalsIgnoreCase(geheimeCodes[3])
+						) {
 					wittePinnen++;
+					feedback[i] = "wit";
+				}else {
+					feedback[i] = "leeg";
 				}
+			}
+			System.out.print("Pinnen: ");
+			for (String pin : feedback) {
+				System.out.print(pin + " ");
 			}
 
 			if (zwartePinnen >= 4) {
