@@ -12,25 +12,16 @@ public class MastermindTest {
 		System.out.println("Mastermind Test. Dubbele kleuren bestaan niet.");
 
 		// Kleuren
-
-		String geelPin = "geel";
-		String groenPin = "groen";
-		String blauwPin = "blauw";
-		String roodPin = "rood";
-		String paarsPin = "paars";
-		String oranjePin = "oranje";
+		String[] kleuren = { "geel", "groen", "blauw", "rood", "paars", "oranje" };
 
 		// Kleuren
-
-		String zwartPin = "zwart";
-		String witPin = "wit";
-		String leegPin = "Leeg";
+		String[] controleKleuren = {"zwart", "wit",  "Leeg"};
 		System.out.println("Speler 1 = Codemaker");
 		System.out.println("Speler 2 = Codekraker");
 
 		// Geheime code & pogingen
 
-		String[] geheimeCodes = { blauwPin, roodPin, oranjePin, paarsPin };
+		String[] geheimeCodes = { kleuren[2], kleuren[3], kleuren[5], kleuren[4] };
 		String[] pogingen = new String[4];
 
 		// User input voor poging 1
@@ -50,8 +41,6 @@ public class MastermindTest {
 					System.out.print(pogingen[i] + " ");
 			}
 			System.out.println();
-			System.out.println("De code is: " + geheimeCodes[0] + " " + geheimeCodes[1] + " " + geheimeCodes[2] + " "
-					+ geheimeCodes[3]);
 			// Controleren van code
 			
 			String[] feedback = new String[4];
@@ -59,7 +48,7 @@ public class MastermindTest {
 			for (int i = 0; i < 4; i++) {
 
 				if (pogingen[i].equalsIgnoreCase(geheimeCodes[i])) {
-					feedback[i] = "zwart";
+					feedback[i] = controleKleuren[0];
 					zwartePinnen++;
 				} else if (pogingen[i].equalsIgnoreCase(geheimeCodes[0])
 						|| pogingen[i].equalsIgnoreCase(geheimeCodes[1])
@@ -67,9 +56,9 @@ public class MastermindTest {
 						|| pogingen[i].equalsIgnoreCase(geheimeCodes[3])
 						) {
 					wittePinnen++;
-					feedback[i] = "wit";
+					feedback[i] = controleKleuren[1];
 				}else {
-					feedback[i] = "leeg";
+					feedback[i] = controleKleuren[2];
 				}
 			}
 			System.out.print("Pinnen: ");
@@ -79,10 +68,12 @@ public class MastermindTest {
 
 			if (zwartePinnen >= 4) {
 				// have won
+				System.out.println();
 				System.out.println("Je hebt gewonnen!");
 				gewonnen = true;
 				break;
 			} else {
+				System.out.println();
 				System.out.println("Je hebt: " + zwartePinnen + " zwarte pinnen en: " + wittePinnen + " witte pinnen.");
 				zwartePinnen = 0;
 				wittePinnen = 0;
