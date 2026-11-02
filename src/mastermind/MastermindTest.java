@@ -66,7 +66,7 @@ public class MastermindTest {
 				System.out.print(pin + " ");
 			}
 
-			if (zwartePinnen >= 4) {
+			if (zwartePinnen == 4) {
 				// have won
 				System.out.println();
 				System.out.println("Je hebt gewonnen!");
